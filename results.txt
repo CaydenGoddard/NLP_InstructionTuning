@@ -1,0 +1,91 @@
+NLP_InstructionTuning - Results
+Model: gpt2   Run: 2026-10-25 15:25
+======================================================================
+
+PART 1: PROMPT-ONLY (ZERO-SHOT)
+======================================================================
+
+--- Task: Translation ---
+PROMPT:
+Translate to Spanish: How are you?
+
+MODEL OUTPUT:
+I'm a Spanish teacher. I teach Spanish to my students. I teach them to read, write, and write. I teach them to read, write, and write. I teach them
+----------------------------------------------------------------------
+
+--- Task: Summarization ---
+PROMPT:
+Summarize the following paragraph in one sentence: The city council voted on Tuesday to expand the public bus system. The plan adds three new routes, extends evening service until midnight, and lowers fares for students and seniors. Council members said the changes should reduce traffic downtown and make it easier for people without cars to get to work.
+
+MODEL OUTPUT:
+The city council voted on Tuesday to expand the public bus system. The plan adds three new routes, extends evening service until midnight, and lowers fares for students and seniors. Council members said the
+----------------------------------------------------------------------
+
+--- Task: Explain to a child ---
+PROMPT:
+Explain gravity to a 6-year-old.
+
+MODEL OUTPUT:
+"I'm not sure if it's a good idea to have a child with a disability," said Dr. David L. Smith, a professor of pediatrics at the University of California,
+----------------------------------------------------------------------
+
+PART 2: SIMULATED INSTRUCTION TUNING (FEW-SHOT)
+======================================================================
+
+--- Task: Translation ---
+PROMPT:
+Instruction: Translate to Spanish
+Input: Hello
+Output: Hola
+
+Instruction: Translate to Spanish
+Input: Good morning
+Output: Buenos días
+
+Instruction: Translate to Spanish
+Input: Thank you
+Output: Gracias
+
+Instruction: Translate to Spanish
+Input: How are you?
+Output:
+
+MODEL OUTPUT:
+Good morning
+----------------------------------------------------------------------
+
+--- Task: Summarization ---
+PROMPT:
+Instruction: Summarize in one sentence
+Input: The school board met Monday night and approved a new lunch menu. The menu includes more fresh fruit and vegetables and removes sugary drinks. Parents had asked for healthier options for over a year.
+Output: The school board approved a healthier lunch menu after parents asked for it.
+
+Instruction: Summarize in one sentence
+Input: Heavy rain caused flooding on several roads Saturday. Police closed two highways and asked drivers to stay home. No injuries were reported.
+Output: Flooding from heavy rain closed roads Saturday, but no one was hurt.
+
+Instruction: Summarize in one sentence
+Input: The city council voted on Tuesday to expand the public bus system. The plan adds three new routes, extends evening service until midnight, and lowers fares for students and seniors. Council members said the changes should reduce traffic downtown and make it easier for people without cars to get to work.
+Output:
+
+MODEL OUTPUT:
+The city council voted on Tuesday to expand the public bus system. The plan adds three new routes, extends evening service until midnight, and lowers fares for students and seniors. Council members said the changes should
+----------------------------------------------------------------------
+
+--- Task: Explain to a child ---
+PROMPT:
+Instruction: Explain to a 6-year-old
+Input: Rain
+Output: Rain is water that falls from clouds when they get too full, like a sponge dripping.
+
+Instruction: Explain to a 6-year-old
+Input: The Sun
+Output: The Sun is a giant ball of fire in the sky that keeps us warm and gives us light.
+
+Instruction: Explain to a 6-year-old
+Input: Gravity
+Output:
+
+MODEL OUTPUT:
+Gravity is the force that pulls the air around us.
+----------------------------------------------------------------------
